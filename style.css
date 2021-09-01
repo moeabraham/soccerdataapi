@@ -1,0 +1,184 @@
+*{
+box-sizing: border-box;
+margin:0;
+/* font-family: 'Indie Flower', cursive; */
+font-family: 'Bitter', serif;
+font-family: 'STIX Two Math', serif;
+}
+
+h2{
+    font-size:22px;
+}
+
+#navMayBe{
+margin:20px 50px 50px 50px;
+
+margin-bottom:50px;
+}
+#searchBar{
+display:flex;
+margin:20px 20px;
+}
+form {
+    justify-content: center;
+    align-items:center;
+    /* width:200px; */
+    margin:auto;
+    padding:auto;
+}
+
+#teamName{
+     /* justify-content: center;
+    align-items:center;
+    width:200px;
+    margin:auto;
+    padding:auto; 
+    display:flex; */
+    margin:20px 20px;
+
+
+}
+h1{
+    justify-content: center;
+    align-items:center;
+    width:200px;
+    margin:auto;
+    padding-left:30px;
+
+}
+#brief{
+    width:400px;
+    margin:auto;
+    border: 2px solid black;
+    padding:20px 20px;
+    /* margin:20px 20px; */
+    margin-bottom:40px;
+    /* display:flex;
+    justify-content: center; */
+
+}
+#info{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    margin:20px 20px;
+}
+#info .fivaFacts{
+
+}
+
+#info .stadInfo{
+
+}
+#info .stadInfo h3{
+    margin:auto;
+    width:300px;
+}
+
+/* a {
+	color: #0254EB
+}
+a:visited {
+	color: #0254EB
+}
+a.morelink {
+	text-decoration:none;
+	outline: none;
+}
+.morecontent span {
+	display: none;
+}
+.comment {
+	width: 400px;
+	background-color: #f0f0f0;
+	margin: 10px;
+} */
+
+.card{
+    display:flex;
+    justify-content:center;
+    margin:auto;
+    flex:1;
+    grid-column: 2/3;
+
+}
+.card-body{
+    height: 200px;
+    overflow: scroll;
+}
+.dynamic{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr;
+}
+#fiveFacts{
+    grid-column: 1/2;
+    grid-row:1/2
+
+
+
+}
+.fiveFacts {
+    grid-column: 1/2;
+    grid-row:1/2
+
+}
+
+.stadInfo{
+    grid-column: 3/4;
+    grid-row:1/2;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+
+}
+#stadTitle{
+    justify-self: center;
+    color:red;
+
+}
+
+.card-body{
+    order:2;
+}
+
+#disclaimer{
+    color:white;
+    background-color:red;
+    font-size:20px;
+    margin-top:10px;
+
+}
+article{
+    display:flex;
+    justify-content: center;
+    gap:5%
+
+}
+.contents{
+    display:flex;
+    flex-direction:column;
+    align-self:center;
+    text-align: center;
+}
+
+.static-img{
+    width:60px;
+    height:50px;
+    align-self:center;
+
+}
+
+.chosen{
+    border: 2px solid green;
+   
+
+}
+.circle{
+    
+    background: lightblue;
+    border-radius: 50%;
+    width: 110px;
+    height: 120px;
+    object-fit:fill;
+
+ }
