@@ -256,24 +256,28 @@ console.log(teamInput)
         const html = `<div class="title"><h1>${exactTeam}</h1></div> `
 
         const html2 = `
-                <div class="card" style="width: 18rem;">
+                <div class="card" >
                 <img src="${stadBadge}" class="card-img-top" alt="..."> 
                 <div class="card-body">
                   <p class="card-text">${stadDisc}</p>
                 </div>
                 </div>
                 <div id="fiveFacts">
-                <ul id="factsList">
+                <div class="factscard">
+
+                <ul id="factsList" style="display:flex, justify-content:center">
                     <li class="fiveFacts">${teamFacts[0]}</li>
                     <li class="fiveFacts">${teamFacts[1]}</li>
                     <li class="fiveFacts">${teamFacts[2]}</li>
                     <li class="fiveFacts">${teamFacts[3]}</li>
                     <li class="fiveFacts">${teamFacts[4]}</li>
                 </ul>
+                </div>
             </div>
             <div class="stadInfo">
-            <h2 id="stadTitle">${stadName}</h2>
              <img  src="${stadImg}" class="img-fluid" alt="..."> 
+             <h2 id="stadTitle">${stadName}</h2>
+
             </div>`;
 
         const lastSearches = searchArr.map(item => `<li>${item}</li>`).join('');
