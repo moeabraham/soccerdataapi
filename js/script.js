@@ -223,7 +223,7 @@ console.log(teamInput)
         // console.log(team);
     let newTeam =  team.filter(team => team.strTeam === teamInput).map(team => {
           
-        return [team.strTeam,team.strDescriptionEN,team.strTeamBadge,team.strStadium,team.strStadiumLocation,team.strStadiumThumb,team.strAlternate,team.strCountry,team.intFormedYear,team.strLeague,team.strWebsite]
+        return [team.strTeam,team.strDescriptionEN,team.strTeamBadge,team.strStadium,team.strStadiumLocation,team.strStadiumThumb,team.strAlternate,team.strCountry,team.intFormedYear,team.strLeague,team.strWebsite, team.strTeamJersey]
       })
     //   console.log(newTeam)
 // let pageTeam = newTeam[0];
@@ -231,7 +231,8 @@ console.log(teamInput)
 // <h1> and logo variables
     const stadDisc = newTeam[0][1].toString();
     const stadBadge = newTeam[0][2].toString();
-    //   console.log(stadBage);
+    const stadJersey = newTeam[0][11]
+      console.log(stadJersey);
     //   the <ul> list 
     const teamFacts = newTeam[0].slice(6,11);
     //   console.log(teamFacts);
@@ -241,7 +242,7 @@ console.log(teamInput)
       const stadName = newTeam[0][3].toString();
       
     //   console.log(stadName)
-                render(newTeam,exactTeam,stadDisc,stadBadge,teamFacts,stadImg,stadName);
+                render(newTeam,exactTeam,stadDisc,stadBadge,teamFacts,stadImg,stadName,stadJersey);
 
     //   console.log(stadName)
     
@@ -250,7 +251,7 @@ console.log(teamInput)
 
 
 
-    function render(newTeam, exactTeam, stadDisc, stadBadge, teamFacts, stadImg, stadName) {
+    function render(newTeam, exactTeam, stadDisc, stadBadge, teamFacts, stadImg, stadName, stadJersey) {
 
 
         const html = `<div class="title"><h1>${exactTeam}</h1></div> `
@@ -262,23 +263,31 @@ console.log(teamInput)
                   <p class="card-text">${stadDisc}</p>
                 </div>
                 </div>
-                <div id="fiveFacts">
-                <div class="factscard">
-
-                <ul id="factsList" style="display:flex, justify-content:center">
-                    <li class="fiveFacts">${teamFacts[0]}</li>
-                    <li class="fiveFacts">${teamFacts[1]}</li>
-                    <li class="fiveFacts">${teamFacts[2]}</li>
-                    <li class="fiveFacts">${teamFacts[3]}</li>
-                    <li class="fiveFacts">${teamFacts[4]}</li>
-                </ul>
-                </div>
-            </div>
             <div class="stadInfo">
              <img  src="${stadImg}" class="img-fluid" alt="..."> 
              <h2 id="stadTitle">${stadName}</h2>
 
-            </div>`;
+            </div>
+            
+
+<div class="part-two">
+            <div class="fact" >
+                <h3 >  ${teamFacts[0]}</h3>
+                <img src="${stadJersey}"></img>
+            </div>    
+            
+            <div class=" threefacts" style="background-image: url(${stadImg})">
+                <h4 >  Country: ${teamFacts[1]}</h4>
+                <h4 >  Since: ${teamFacts[2]}</h4>
+                <h4 >  ${teamFacts[3]}</h4>
+            </div>  
+  
+ </div>           
+            
+            
+            
+            
+            `;
 
         const lastSearches = searchArr.map(item => `<li>${item}</li>`).join('');
         const searchList = `<ul>${lastSearches}</ul>`;
