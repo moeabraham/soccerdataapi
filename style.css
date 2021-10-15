@@ -278,6 +278,7 @@
     .stadInfo {
         display:flex;
         order:1;
+        margin-bottom:1rem;
     
     }
     .dynamic > .card{
@@ -292,10 +293,7 @@
         order:1;
     
     }
-    .dynamic > #fiveFacts{
-    display:flex;
-    order:3;
-    }
+    
     .dynamic > .fact {
         order:3;
         margin-top:1rem;
