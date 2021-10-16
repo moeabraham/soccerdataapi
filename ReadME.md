@@ -25,5 +25,6 @@ Allows the user to get information regarding his favorite soccer team by using a
 
   - create an animated section with a carousel to show club's trophy 
   - add pages to compare stats using a different API
+  - add audio tracks for the fans chants
 
 
