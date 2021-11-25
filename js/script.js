@@ -21,12 +21,12 @@ var elements = document.querySelectorAll('.contents');
 
 
 elements.forEach(el=> el.addEventListener('click', event => {
-    console.log(event)
+    // console.log(event)
     // console.log(event.target.name)
    
 
     var newSearch = event.target.name
-
+    console.log(newSearch)
     
    
     // const newSearch =  if(newSearch =!! newSearch){
@@ -54,7 +54,7 @@ elements.forEach(el=> el.addEventListener('click', event => {
 
 
 
-    $.ajax(`https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=${newSearch}`).then(function(data){
+    $.ajax(`https://www.thesportsdb.com/api/v1/json/2/searchteams.php?t=${newSearch}`).then(function(data){
     // if(data.teams[0].teamStr !== null) return alert('team not found');
     // console.log(inputValue)
     // document.querySelector('.form-control').value = ''
@@ -158,13 +158,13 @@ document.getElementById('form').addEventListener('submit',function(e){
     // console.log(searchArr);
 
 
-    let link = 'https://thesportsdb.com/api/v1/json/2/lookupteam.php?id=133604'
+    // let link = 'https://thesportsdb.com/api/v1/json/2/lookupteam.php?id=133604'
 
 
 
     $.ajax(`https://www.thesportsdb.com/api/v1/json/2/searchteams.php?t=${userTeam}`).then(function(data){
     // if(data.teams[0].teamStr !== null) return alert('team not found');
-    // console.log(inputValue)
+    // console.log(inputValue)x
     // document.querySelector('.form-control').value = ''
     // console.log(data.teams[0].strTeam)
     // console.log(teamInput)
@@ -290,10 +290,10 @@ console.log(teamInput)
             
             `;
 
-        // const lastSearches = searchArr.map(item => `<li>${item}</li>`).join('');
-        // const searchList = `<ul>${lastSearches}</ul>`;
+        const lastSearches = searchArr.map(item => `<li>${item}</li>`).join('');
+        const searchList = `<ul>${lastSearches}</ul>`;
         $('#title').html(html)
-        $('.dynamic').html(html2 + searchList)
+        $('.dynamic').html(html2 + html)
 
 
     };
