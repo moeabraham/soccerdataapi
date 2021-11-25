@@ -161,7 +161,7 @@ document.getElementById('form').addEventListener('submit',function(e){
 
 
 
-    $.ajax(`https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=${userTeam}`).then(function(data){
+    $.ajax(`https://www.thesportsdb.com/api/v1/json/2/searchteams.php?t=${userTeam}`).then(function(data){
     // if(data.teams[0].teamStr !== null) return alert('team not found');
     // console.log(inputValue)
     // document.querySelector('.form-control').value = ''
