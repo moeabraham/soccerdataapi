@@ -149,6 +149,7 @@ document.getElementById('form').addEventListener('submit',function(e){
    
     var userTeam = document.querySelector('.form-control').value.toLowerCase();
     var teamInput = toUpperCas(userTeam);
+    console.log(userTeam)
     // searchArr.push(teamInput);
     storeSearch(teamInput);
 
@@ -157,7 +158,7 @@ document.getElementById('form').addEventListener('submit',function(e){
     // console.log(searchArr);
 
 
-    let link = 'https://thesportsdb.com/api/v1/json/1/lookupteam.php?id=133604'
+    let link = 'https://thesportsdb.com/api/v1/json/2/lookupteam.php?id=133604'
 
 
 
@@ -289,8 +290,8 @@ console.log(teamInput)
             
             `;
 
-        const lastSearches = searchArr.map(item => `<li>${item}</li>`).join('');
-        const searchList = `<ul>${lastSearches}</ul>`;
+        // const lastSearches = searchArr.map(item => `<li>${item}</li>`).join('');
+        // const searchList = `<ul>${lastSearches}</ul>`;
         $('#title').html(html)
         $('.dynamic').html(html2 + searchList)
 
