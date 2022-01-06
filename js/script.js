@@ -26,7 +26,7 @@ elements.forEach(el=> el.addEventListener('click', event => {
    
 
     var newSearch = event.target.name
-    console.log(newSearch)
+    // console.log(newSearch)
     
    
     // const newSearch =  if(newSearch =!! newSearch){
@@ -54,7 +54,7 @@ elements.forEach(el=> el.addEventListener('click', event => {
 
 
 
-    $.ajax(`https://www.thesportsdb.com/api/v1/json/2/searchteams.php?t=${newSearch}`).then(function(data){
+    $.ajax(`https://www.thesportsdb.com/api/v1/json/50130162/searchteams.php?t=${newSearch}`).then(function(data){
     // if(data.teams[0].teamStr !== null) return alert('team not found');
     // console.log(inputValue)
     // document.querySelector('.form-control').value = ''
@@ -162,7 +162,7 @@ document.getElementById('form').addEventListener('submit',function(e){
 
 
 
-    $.ajax(`https://www.thesportsdb.com/api/v1/json/2/searchteams.php?t=${userTeam}`).then(function(data){
+    $.ajax(`https://www.thesportsdb.com/api/v1/json/50130162/searchteams.php?t=${userTeam}`).then(function(data){
     // if(data.teams[0].teamStr !== null) return alert('team not found');
     // console.log(inputValue)x
     // document.querySelector('.form-control').value = ''
