@@ -258,6 +258,7 @@
         max-width:100vw;
     
     }
+    h1{display:none}
     #searchbar{
         margin: 0px 0px;
         width:1rem;
